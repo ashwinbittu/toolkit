@@ -8,6 +8,12 @@ const RANDOM_STRING_SOURCE = "ABCDEFGNOPFQEASDFASabcdedifkgnasoiereasfdadf034723
 type Tools struct {
 }
 
+type UploadedFile struct {
+	NewFileName      string
+	OriginalFileName string
+	FileSize         int
+}
+
 //This function returns a string of random characters of length n
 func (recv *Tools) RandomString(n int) string {
 	s, r := make([]rune, n), []rune(RANDOM_STRING_SOURCE)
@@ -17,4 +23,8 @@ func (recv *Tools) RandomString(n int) string {
 		s[i] = r[x%y]
 	}
 	return string(s)
+}
+
+func TestIng() string {
+	return "ABC"
 }
